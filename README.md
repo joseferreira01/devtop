@@ -29,7 +29,7 @@ as métricas de avaliação são linguagem e data do utimo commit.</p>
 4. Altere `URL, username e password.
 5. Rode `mvn clean packag` para instalar as dependências e criar o executavel (api.jar);
 6. Rode `java -jar target/api.jar` para iniciar o servidor.
-7. Acesse  [use a api no localhost](http://localhost:800/api/user)
+7. Acesse  [use a api no localhost](http://localhost:8080/api/user)
 8. Documentação [docs](http://localhost:8080/v2/api-docs)
 
 
