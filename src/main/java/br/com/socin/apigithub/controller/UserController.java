@@ -34,7 +34,7 @@ public class UserController {
         return this.userService.index();
     }
 
-    @GetMapping("/user{id}")
+    @GetMapping("/user/{id}")
     public User findOn(@PathVariable(value = "id") long id) {
         return this.userService.find(id);
     }
