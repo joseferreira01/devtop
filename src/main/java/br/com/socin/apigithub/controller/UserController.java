@@ -33,12 +33,7 @@ public class UserController {
 
     @Autowired
     private UserServiceIF userService;
-    
-@ApiOperation(value = "Teste de funcionamento")
-    @GetMapping("/test")
-    public String test() {
-        return "API dev top no ar";
-    }
+
     @ApiOperation(value = "Retorna uma lista de usuários")
     @GetMapping("/user")
     public List<User> index() {
