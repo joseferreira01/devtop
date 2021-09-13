@@ -1,18 +1,20 @@
 
 <h3 align="center">
-  Ligero emais
+  Dev Top
 </h3>
 
-<p align="center">Nessa api fazemos o envio de emais trabalhondo em segundo plano com Node.js utilizando uma biblioteca fantástica chamada Bull que nos permite não só executar background tasks mas também monitorar falhas, realizar retentativas, adicionar prioridades e tudo isso de uma forma extremamente simples e performática.</p>
+<p align="center">Nessa api fazemos encontrar os melhores programadores do
+mercado. O Usuário avaliar os desenvolvedores de código aberto do github,
+as métricas de avaliação são linguagem e data do utimo commit.</p>
 
 ## 👨🏼‍💻 Responsavel
 
-- [Oxe Desenvolvimentos](https://github.com/Oxe-projetos/)
+- [José Ferreira](https://github.com/joseferreira01/)
 
 ## 🚀 Tecnologias
 
-- ⚡ Express — A web framework for Node.js
-- 🐮Bull — Premium Queue package for handling distributed jobs
+- ⚡ Spring(boot, JPA,REST)
+- 🐮
 
 ## ✋🏻 Pré-requisitos
 
