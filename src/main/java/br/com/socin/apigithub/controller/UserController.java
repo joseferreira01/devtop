@@ -17,39 +17,50 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 /**
  *
  * @author jose
  */
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/api")
+@Api(value = "API REST Dev top")
 public class UserController {
 
     @Autowired
     private UserServiceIF userService;
 
+    @ApiOperation(value = "Retorna uma lista de usuários")
     @GetMapping("/user")
     public List<User> index() {
         return this.userService.index();
     }
 
+    @ApiOperation(value = "Retorna um Usuário unico")
     @GetMapping("/user/{id}")
     public User findOn(@PathVariable(value = "id") long id) {
         return this.userService.find(id);
     }
 
+    @ApiOperation(value = "Criar um usuario")
     @PostMapping("/user")
     public User store(@RequestBody User user) {
         return this.userService.store(user);
 
     }
 
+    @ApiOperation(value = "Atualizar dodos do usuário")
     @PutMapping("/user")
     public User up(@RequestBody User user) {
         return this.userService.store(user);
 
     }
+
+    @ApiOperation(value = "Apaga um Usuario")
     @DeleteMapping("/user")
     public void delete(@RequestBody User user) {
         this.userService.delete(user);
