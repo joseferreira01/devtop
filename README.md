@@ -23,7 +23,7 @@ as métricas de avaliação são linguagem e data do utimo commit.</p>
 ## 🔥 Instalação e execução
 
 1. Faça um clone desse repositório;
-2. Entre na pasta `cd api-github`;
+2. Entre na pasta `cd devtop`;
 3. Rode `mvn clean packag` para instalar as dependências e criar o executavel (api.jar);
 7. Rode `java -jar target/api.jar` para iniciar o servidor.
 
