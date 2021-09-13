@@ -17,41 +17,42 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class UserService implements UserServiceIF {
-
+    
     @Autowired
     private UserRepositoey repository;
-
+    
     @Override
     public User store(User user) {
+        user.setPassword(Criptografar.hashPassword(user.getPassword()));
         User u = this.repository.save(user);
         u.setPassword("");
         return u;
-
+        
     }
-
+    
     @Override
     public List<User> index() {
         return this.repository.findAll();
     }
-
+    
     @Override
     public User find(Long id) {
         return this.repository.getById(id);
     }
-
+    
     @Override
     public void delete(User user) {
         repository.delete(user);
     }
-
+    
     @Override
     public Long login(String email, String password) {
         User user = this.repository.findByEmail(email);
-        if (user != null && user.getPassword().endsWith(password)) {
+        if (user != null && user.getPassword().equals( Criptografar.hashPassword(password))) {
             return user.getId();
         } else {
             return -1L;
         }
     }
-
+    
 }

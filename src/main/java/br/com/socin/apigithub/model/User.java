@@ -19,14 +19,13 @@ import javax.persistence.Id;
  */
 @Entity(name = "TB_user")
 public class User implements Serializable {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(nullable = false,length = 50)
-    private String name;
-     @Column(nullable = false,length = 50)
+    @Column(nullable = false, length = 50)
     private String email;
-     @Column(nullable = false,length = 16)
+    @Column(nullable = false, length = 50)
     private String password;
 
     public Long getId() {
@@ -35,14 +34,6 @@ public class User implements Serializable {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public String getEmail() {
@@ -89,6 +80,5 @@ public class User implements Serializable {
         }
         return true;
     }
-    
-    
+
 }
