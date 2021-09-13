@@ -13,7 +13,7 @@ as métricas de avaliação são linguagem e data do utimo commit.</p>
 
 ## 🚀 Tecnologias
 
-- ⚡ Spring(boot, JPA,REST)
+- ⚡ Spring(boot, JPA, REST)
 
 ## ✋🏻 Pré-requisitos
 
