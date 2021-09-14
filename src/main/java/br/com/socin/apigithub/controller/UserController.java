@@ -42,7 +42,7 @@ public class UserController {
 
     @ApiOperation(value = "Retorna um Usuário unico")
     @GetMapping("/user/{id}")
-    public User findOn(@PathVariable(value = "id") long id) {
+    public User findOn(@PathVariable Long id) {
         return this.userService.find(id);
     }
 
