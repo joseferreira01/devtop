@@ -37,4 +37,9 @@ public class Metricas {
         this.page = page;
     }
 
+    @Override
+    public String toString() {
+        return "Metricas{" + "language=" + language + ", page=" + page + '}';
+    }
+
 }

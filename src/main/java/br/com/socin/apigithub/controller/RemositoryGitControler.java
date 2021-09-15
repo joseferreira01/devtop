@@ -11,8 +11,8 @@ import br.com.socin.apigithub.service.ApiGithubService;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -22,16 +22,18 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api")
 public class RemositoryGitControler {
+
     @Autowired
     ApiGithubService service;
 
     @ApiOperation(value = "Retorna uma lista de usuários")
     @GetMapping("/repos")
-    public RemositoryGit index() {
-        Metricas metricas = new Metricas("c",1);
-        
+    public RemositoryGit index(
+            @RequestParam(name = "language") String language,
+            @RequestParam(name = "page") int page) {
+        Metricas metricas = new Metricas(language, page);
+
         return this.service.find(metricas);
     }
-    
 
 }
