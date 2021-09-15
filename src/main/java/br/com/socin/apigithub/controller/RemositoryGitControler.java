@@ -9,9 +9,9 @@ import br.com.socin.apigithub.model.Metricas;
 import br.com.socin.apigithub.model.RemositoryGit;
 import br.com.socin.apigithub.service.ApiGithubService;
 import io.swagger.annotations.ApiOperation;
-import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -28,7 +28,10 @@ public class RemositoryGitControler {
     @ApiOperation(value = "Retorna uma lista de usuários")
     @GetMapping("/repos")
     public RemositoryGit index() {
-        return this.service.find(new Metricas());
+        Metricas metricas = new Metricas("c",1);
+        
+        return this.service.find(metricas);
     }
+    
 
 }

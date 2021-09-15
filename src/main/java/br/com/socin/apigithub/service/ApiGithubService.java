@@ -20,18 +20,29 @@ import reactor.core.publisher.Mono;
  */
 @Service
 public class ApiGithubService {
+
     @Autowired
     WebClient WebClient;
-    public RemositoryGit find(Metricas metricas){
+
+    public RemositoryGit find(Metricas metricas) {
+        // /search/repositories?q=language:TypeScript&sort=stars&page=1
+        StringBuffer uri = new StringBuffer();
+        uri.append("/search/repositories?q=language:");
+        uri.append(metricas.getLanguage());
+        uri.append("&sort=stars&page=");
+        uri.append(metricas.getPage());
+        System.err.println("uri: search/repositories?q=language:TypeScript&sort=stars&page=1");
+        System.err.println("uri sai " + uri.toString());
         Mono<RemositoryGit> monoRemositoryGit = this.WebClient
-                .method(HttpMethod.GET).uri("/users/joseferreira01")
+                //.method(HttpMethod.GET).uri("/users/joseferreira01")
+                .method(HttpMethod.GET).uri(uri.toString())
                 .retrieve()
                 .bodyToMono(RemositoryGit.class);
-        monoRemositoryGit.subscribe(r ->{
-            System.out.println("retono da api git "+r.toString());
+        monoRemositoryGit.subscribe(r -> {
+            System.out.println("retono da api git " + r.toString());
         });
-        
+
         return monoRemositoryGit.block();
     }
-        
-    }
+
+}

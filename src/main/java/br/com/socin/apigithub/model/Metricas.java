@@ -12,6 +12,29 @@ import java.time.LocalDate;
  * @author jose
  */
 public class Metricas {
-    private String lg;
-    private LocalDate data;
+
+    private String language;
+    private int page;
+
+    public Metricas(String language, int page) {
+        this.language = language;
+        this.page = page;
+    }
+
+    public String getLanguage() {
+        return language;
+    }
+
+    public void setLanguage(String language) {
+        this.language = language;
+    }
+
+    public int getPage() {
+        return page;
+    }
+
+    public void setPage(int page) {
+        this.page = page;
+    }
+
 }

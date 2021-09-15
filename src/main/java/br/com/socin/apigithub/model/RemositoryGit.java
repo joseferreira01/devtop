@@ -6,37 +6,33 @@
 package br.com.socin.apigithub.model;
 
 import java.time.LocalDate;
+import java.util.List;
 
 /**
  *
  * @author jose
  */
 public class RemositoryGit {
-    private String name;
-    private String html_url;
+    private String total_count;
+    private Items items[];
+   
+    public String getTotal_count() {
+        return total_count;
+    }
 
-    public String getName() {
-        return name;
+
+    public Items[] getItems() {
+        return items;
+    }
+
+    public void setItems(Items[] items) {
+        this.items = items;
     }
 
     @Override
     public String toString() {
-        return "RemositoryGit{" + "name=" + name + ", html_url=" + html_url + '}';
-    }
-    
-
-    public void setName(String name) {
-        this.name = name;
+        return "RemositoryGit{" + "total_count=" + total_count + ", items=" + items + '}';
     }
 
-    public String getHtml_url() {
-        return html_url;
-    }
-
-    public void setHtml_url(String html_url) {
-        this.html_url = html_url;
-    }
-    
-    
-    
+   
 }
