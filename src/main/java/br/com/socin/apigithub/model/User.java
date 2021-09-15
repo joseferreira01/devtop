@@ -12,6 +12,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.Email;
+
 
 /**
  *
@@ -23,7 +25,9 @@ public class User implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(nullable = false, length = 50,unique = true)
+    @Column(nullable = false, length = 50, unique = true)
+    private String name;
+    @Column(nullable = false, length = 50, unique = true)
     private String email;
     @Column(nullable = false, length = 50)
     private String password;
@@ -36,6 +40,15 @@ public class User implements Serializable {
         this.id = id;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Email(message = "Email invalido")
     public String getEmail() {
         return email;
     }
