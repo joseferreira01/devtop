@@ -18,7 +18,9 @@ public class Metricas {
 
     public Metricas(String language, int page) {
         this.language = language;
-        this.page = page;
+        if(page<1)
+        this.page = 1;
+        else this.page =page;
     }
 
     public String getLanguage() {

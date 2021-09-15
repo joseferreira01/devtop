@@ -9,6 +9,7 @@ import br.com.socin.apigithub.model.Metricas;
 import br.com.socin.apigithub.model.RemositoryGit;
 import br.com.socin.apigithub.service.ApiGithubService;
 import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,11 +27,14 @@ public class RemositoryGitControler {
     @Autowired
     ApiGithubService service;
 
-    @ApiOperation(value = "Retorna uma lista de usuários")
+    @ApiParam(required = true,
+            example
+            = "language=java o segundo parametro é page (http(s):// hostname/api/repos?language=java&page=1)")
+    @ApiOperation(value = "Retorna uma lista de repositóris do github que tem códigos escritos em liguagem especifica.")
     @GetMapping("/repos")
     public RemositoryGit index(
             @RequestParam(name = "language") String language,
-            @RequestParam(name = "page") int page) {
+            @RequestParam(name = "page",required = false) int page) {
         Metricas metricas = new Metricas(language, page);
 
         return this.service.find(metricas);
