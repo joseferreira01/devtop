@@ -19,7 +19,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.RequestHeader;
 //import org.springframework.web.bind.annotation.CrossOrigin;
 
 /**
@@ -61,10 +63,12 @@ public class UserController {
 
     }
 
-    @ApiOperation(value = "Apaga um Usuario")
+    @ApiOperation(value = "Apaga um Usuario Header:Authorization <Long>")
+    
     @DeleteMapping("/user")
-    public void delete(@RequestBody User user) {
-        this.userService.delete(user);
+    public void delete(@RequestHeader("Authorization") Long authorization,@RequestBody User user) {
+        System.err.println("deletando user "+authorization);
+        this.userService.delete(authorization);
 
     }
 }

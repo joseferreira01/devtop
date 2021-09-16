@@ -20,7 +20,7 @@ public interface UserServiceIF {
 
     User find(Long id);
 
-    void delete(User user);
+    void delete(Long id);
 
     Long login(String email, String password);
 }
