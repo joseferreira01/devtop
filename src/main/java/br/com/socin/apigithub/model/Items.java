@@ -10,7 +10,7 @@ package br.com.socin.apigithub.model;
  * @author jose
  */
 public class Items {
-
+    private String id;
     private String name;
     private String html_url;
     private String description;
@@ -18,6 +18,13 @@ public class Items {
 
     public String getName() {
         return name;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+    public String getId() {
+        return id;
     }
 
     public void setName(String name) {
@@ -51,7 +58,7 @@ public class Items {
 
     @Override
     public String toString() {
-        return "Items{" + "name=" + name + ", html_url=" + html_url + ", description=" + description + ", owner=" + owner + '}';
+        return "Items{" +"id=" + id +"name=" + name + ", html_url=" + html_url + ", description=" + description + ", owner=" + owner + '}';
     }
 
 }
