@@ -63,7 +63,7 @@ public class UserController {
 
     }
 
-    @ApiOperation(value = "Apaga um Usuario Header:Authorization <Long>")
+    @ApiOperation(value = "Apaga um Usuario Header:Authorization <Long>.")
     
     @DeleteMapping("/user")
     public void delete(@RequestHeader("Authorization") Long authorization,@RequestBody User user) {
