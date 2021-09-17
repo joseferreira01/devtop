@@ -26,7 +26,14 @@ as métricas de avaliação são linguagem e data do utimo commit.</p>
 1. Faça um clone desse repositório;
 2. Entre na pasta `cd devtop`;
 3. Configure a conexao com o banco `apigithub/src/main/resources/application.properties`
-4. Altere `URL, username e password.
+4. Altere `URL, username e password .
+5.Configure variáveis ambiente:
+- APP_CLAENT_SECRETS
+- APP_CLAENT_ID.
+<p>
+Essas variáveis são necessárias para utilização da [API do github](https://docs.github.com/pt/enterprise-server@3.0/developers/apps/building-github-apps/creating-a-github-app)
+</p>
+
 5. Rode `mvn clean packag` para instalar as dependências e criar o executavel (api.jar);
 6. Rode `java -jar target/api.jar` para iniciar o servidor.
 7. Acesse  [use a api no localhost](http://localhost:8080/api/user)
