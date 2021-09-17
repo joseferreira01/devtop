@@ -6,6 +6,8 @@
 <p align="center">Nessa api fazemos encontrar os melhores programadores do
 mercado. O Usuário avaliar os desenvolvedores de código aberto do github,
 as métricas de avaliação são linguagem e data do utimo commit.</p>
+ [va para o site]( https://topdevs.herokuapp.com/)
+ <a target="_blank" href=" https://topdevs.herokuapp.com/"> dev tops</a>
 
 ## 👨🏼‍💻 Responsavel
 
@@ -50,9 +52,8 @@ Essas variáveis são necessárias para utilização da API do github https://do
 
 Depois que o merge da sua pull request for feito, você pode deletar a sua branch.
 
-## 📝 Licença
-
-Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
+##  Código fonte do front and 
+- [Aqui ](https://github.com/joseferreira01/devtop-front)
 
 ---
 
