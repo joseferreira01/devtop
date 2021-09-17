@@ -7,7 +7,7 @@
 mercado. O Usuário avaliar os desenvolvedores de código aberto do github,
 as métricas de avaliação são linguagem e data do utimo commit.</p>
  [va para o site]( https://topdevs.herokuapp.com/)
- <a target="_blank" href=" https://topdevs.herokuapp.com/"> dev tops</a>
+
 
 ## 👨🏼‍💻 Responsavel
 
