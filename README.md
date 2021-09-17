@@ -5,8 +5,8 @@
 
 <p align="center">Nessa api fazemos encontrar os melhores programadores do
 mercado. O Usuário avaliar os desenvolvedores de código aberto do github,
-as métricas de avaliação são linguagem e data do utimo commit.</p>
- va para o site: https://topdevs.herokuapp.com/
+as métricas de avaliação são linguagem e data do utimo commit.
+ va para o site: https://topdevs.herokuapp.com/</p>
 
 
 ## 👨🏼‍💻 Responsavel
