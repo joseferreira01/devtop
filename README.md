@@ -52,7 +52,7 @@ Essas variáveis são necessárias para utilização da API do github https://do
 
 Depois que o merge da sua pull request for feito, você pode deletar a sua branch.
 
-##  Código fonte do front and 
+##  Código do front and 
 - [Aqui ](https://github.com/joseferreira01/devtop-front)
 
 ---
