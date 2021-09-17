@@ -31,7 +31,7 @@ as métricas de avaliação são linguagem e data do utimo commit.</p>
 - APP_CLAENT_SECRETS
 - APP_CLAENT_ID.
 <p>
-Essas variáveis são necessárias para utilização da [API do github](https://docs.github.com/pt/enterprise-server@3.0/developers/apps/building-github-apps/creating-a-github-app)
+Essas variáveis são necessárias para utilização da API do github https://docs.github.com/pt/enterprise-server@3.0/developers/apps/building-github-apps/creating-a-github-app
 </p>
 
 5. Rode `mvn clean packag` para instalar as dependências e criar o executavel (api.jar);
